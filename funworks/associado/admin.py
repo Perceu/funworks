@@ -5,6 +5,9 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import User
 
 from funworks.associado.models import Associado
+from funworks.associado.list_filter.entradafilter import EntradaFilter
+from funworks.associado.list_filter.nascimentofilter import NascimentoFilter
+
 
 class AssociadoAdmin(admin.ModelAdmin): 
     search_fields = [
@@ -15,15 +18,14 @@ class AssociadoAdmin(admin.ModelAdmin):
         'nome', 'filhos', 'nascimento', 'entrada', 'saida'
     ]
 
-    list_filter = ['filhos', 'nascimento', 'entrada', 'saida' ]
+    list_filter = ['filhos', NascimentoFilter, EntradaFilter]
 
     readonly_fields = ['user', 'entrada', 'nascimento', 'saida']
 
     def get_readonly_fields(self, request, obj=None):
 
         if request.user.is_superuser:
-            return self.readonly_fields+['nome', 'filhos', 'nascimento', 'entrada', 'saida', 
-                    'endereco', 'orientacao_alimentar', 'alergias_intolerancia', 'obs_gerais', 'telefone', 'whatsapp']
+            return self.readonly_fields+['nome', 'filhos', 'nascimento', 'entrada', 'saida', 'endereco', 'orientacao_alimentar', 'alergias_intolerancia', 'obs_gerais', 'telefone', 'whatsapp']
 
         return self.readonly_fields
 
