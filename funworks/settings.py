@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'funworks.mensalidade',
     'funworks.associado',
+    'funworks.mandato',
     'funworks.core',
 ]
 
