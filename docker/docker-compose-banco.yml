@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    environment:
+        POSTGRES_USER: funworks
+        POSTGRES_PASSWORD: funw0rk5d&
+        POSTGRES_DB: funworksdb
+    volumes: 
+        - pgdata:/var/lib/postgresql/data
+
+volumes:
+    pgdata:
