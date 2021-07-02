@@ -25,7 +25,7 @@ class AssociadoAdmin(admin.ModelAdmin):
     def get_readonly_fields(self, request, obj=None):
 
         if request.user.is_superuser:
-            return self.readonly_fields+['nome', 'filhos', 'nascimento', 'entrada', 'saida', 'endereco', 'orientacao_alimentar', 'alergias_intolerancia', 'obs_gerais', 'telefone', 'whatsapp']
+            return ['user', 'nome', 'filhos', 'nascimento', 'entrada', 'saida', 'endereco', 'orientacao_alimentar', 'alergias_intolerancia', 'obs_gerais', 'telefone', 'whatsapp']
 
         return self.readonly_fields
 
