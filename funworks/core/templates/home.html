@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    <div id="wave-container">
+        <div id="wave">
+            {% include 'menu.html' %}
+            <div class="container banner">
+                <div class="title-background">
+                    <img src="{% static 'img/Pontilhado.svg'%}" alt="logo" class="menu-img">
+                </div>
+                <div class="title">
+                    <small class="sup-title" >Portal</small>
+                    <h1>Transparência</h1>
+                    <p>Um lugar onde você pode consultar tudo!</p>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock %}

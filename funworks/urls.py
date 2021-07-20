@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from funworks.core.views import base_view, login
 
 urlpatterns = [
-    path('', admin.site.urls),
+    path('', base_view),
+    path('login', login),
+    path('admin', admin.site.urls),
 ]

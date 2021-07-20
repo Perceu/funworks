@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+html, body {
+    font-family: 'Ubuntu', sans-serif !important;
+    background-color: #E8E8E8;
+}
+#wave-container {
+    overflow: hidden;
+    height: 100vh;
+}
+#wave {
+    background-color: white;
+    position: relative;
+    height: 60vh;
+    z-index: 0;
+}
+
+#wave::after {
+    z-index: 0;
+    background-color: #E8E8E8;
+    height: 60vh;
+    border-radius: 50%;
+    width: 70%;
+    top: 30vh;
+    right: -20%;
+    content: "";
+    display: block;
+    position: absolute;
+}
+#wave::before {
+    background-color: white;
+    height: 60vh;
+    border-radius: 50%;
+    width: 70%;
+    left: -20%;
+    top: 30vh;
+    z-index: 0;
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.menu-img{
+    width: 300px;
+}
+
+
+.fun-link{
+    font-weight: 700;
+    color: #1B1F26;
+}
+.fun-link:hover{
+    color: #E30030;
+}
+.fun-link:focus{
+    color: #E30030;
+}
+
+.fun-button{
+    font-weight: 700;
+    color: white;
+    transition-property: background!important;
+    transition-duration: 2s!important;
+    transition-timing-function: linear!important;
+    background: rgb(227,0,48)!important;
+    background: linear-gradient(90deg, rgba(227,0,48,1) 0%, rgba(53,19,150,1) 100%, rgba(0,212,255,1) 100%) !important; 
+}
+
+.fun-button:hover{
+    color: #E8E8E8;
+    background: rgb(227,0,48)!important;
+    background: linear-gradient(90deg, rgba(227,0,48,1) 0%, rgba(53,19,150,1) 100%, rgba(0,212,255,1) 100%) !important; 
+}
+
+.banner{
+    height: 60vh;
+    position: relative;
+}
+
+.title{
+    z-index: 1;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+}
+
+.title p{
+    z-index: 1;
+    color: #C1C1C1;
+    font-weight: 900;
+    font-size: 1.5em;
+}
+.title h1{
+    z-index: 1;
+    font-weight: 900;
+    font-size: 3em;
+}
+
+.title-background{
+    z-index: 1;
+    position: absolute;
+    top: 8%;
+    left: 0;
+}
+
+.title-background img{
+    width: 150px;
+    z-index: 1;
+}
+
+
+.sup-title{
+    z-index: 1;
+    color: #E30030;
+    font-size: 2em;
+    margin-left: 15px;
+    text-transform: uppercase;
+}
+
+.fun-button:focus{
+    z-index: 1;
+    color: #ccc;
+    background: rgb(227,0,48)!important;
+    background: linear-gradient(90deg, rgba(227,0,48,1) 0%, rgba(53,19,150,1) 100%, rgba(0,212,255,1) 100%) !important; 
+}

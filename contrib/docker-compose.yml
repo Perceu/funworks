@@ -1,0 +1,14 @@
+version: "3.6"
+
+services:
+  db:
+    image: postgres:13
+    container_name: funworks-db
+    environment:
+      - POSTGRES_USER=funworks
+      - POSTGRES_PASSWORD=funworkspass
+      - POSTGRES_DB=funworksdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./bkps/:/home/bkps/
