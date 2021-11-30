@@ -62,4 +62,17 @@ def loggoff(request):
     request.session['user_nome'] = ''
     request.session['user_mail'] = ''
     return redirect('/')
+
+
+def como_pagar(request):
+
+    nome = request.session['user_nome']
+    email = request.session['user_mail']
+
+    context = {
+        'nome':nome,
+        'mail':email,
+    }
+    
+    return render(request, 'como_pagar.html', context)
     

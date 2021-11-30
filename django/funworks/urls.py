@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from funworks.core.views import home, login, logar, loggoff
+from funworks.core.views import home, login, logar, loggoff, como_pagar
 
 
 urlpatterns = [
@@ -22,4 +22,5 @@ urlpatterns = [
     path('login', login),
     path('logar', logar),
     path('logoff', loggoff),
+    path('como-pagar', como_pagar),
 ]

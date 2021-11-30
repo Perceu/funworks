@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+{% include 'menu.html' %}
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Como contribuir para a funworks?</h2>
+                    <hr>
+                    <p>
+                        Os pagamentos da funworks são efetuados via deposito pix.<br>
+                        A chave para o pagamento é: 
+                    </p>
+                    <p  class="text-center">
+                        <span class="text-muted">funworks@keyworks.com.br</span>
+                    </p>
+                    <p class="fs-6">
+                        É muito importante para o registro rapido do seu pagamento e para o nosso controle o envio do comprovante para o mesmo email:<br>
+                        <span class="text-danger">funworks@keyworks.com.br</span>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
