@@ -18,7 +18,7 @@
                     <tr>
                         <td>{{pagamento.vencimentoConta | date:"d/m/Y" }}</td>
                         <td>{{pagamento.pagamentoConta  | date:"d/m/Y" }}</td>
-                        <td  class="text-end">R$ {{pagamento.valorReceber}}</td>
+                        <td  class="text-end">R$ {{pagamento.valorReceber | floatformat:2}}</td>
                     </tr>
                 {% endfor %}
             </table>                
