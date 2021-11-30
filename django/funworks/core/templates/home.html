@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+{% include 'menu.html' %}
+<div class="container">
+    <div class="row">
+        <div class="cols-6">
+            <table class="table table-sm table-hover table-striped">
+                <thead>
+                    <tr>
+                        <td>Data Vencimento</td>
+                        <td>Data Pagamento</td>
+                        <td class="text-end">Valor</td>
+                    </tr>
+                </thead>
+                {% for pagamento in pagamentos %}
+                    <tr>
+                        <td>{{pagamento.vencimentoConta | date:"d/m/Y" }}</td>
+                        <td>{{pagamento.pagamentoConta  | date:"d/m/Y" }}</td>
+                        <td  class="text-end">R$ {{pagamento.valorReceber}}</td>
+                    </tr>
+                {% endfor %}
+            </table>                
+        </div>
+    </div>
+</div>
+{% endblock %}

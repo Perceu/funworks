@@ -1,0 +1,34 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    environment:
+        POSTGRES_USER: funworks
+        POSTGRES_PASSWORD: funw0rk5d&
+        POSTGRES_DB: funworksdb
+    networks:
+      - funworks_net
+    volumes: 
+        - pgdata:/var/lib/postgresql/data
+
+  django:
+    build: 
+        context: ./docker
+        dockerfile: python.dockerfile
+    working_dir: /var/www/django
+    networks:
+      - funworks_net
+    command: bash -c "python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - 8000:8000
+    extra_hosts:
+      - "keyworks.com.br:192.168.1.251"
+    volumes: 
+        - ./django:/var/www/django
+
+volumes:
+  pgdata:
+
+networks:
+  funworks_net:

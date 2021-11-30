@@ -1,3 +1,12 @@
-SECRET_KEY='dont-use-this-key-3b+_8(y1%+_&@vi5%7l_a#agov+$i*p%k#vy)_tdikrz@%o(39'
+SECRET_KEY='django-insecure-3b+_8(y1%+_&@vi5%7l_a#agov+$i*p%k#vy)_tdikrz@%o(39'
 DEBUG=True
-#DATABASE_URL=postgres://funworks:funworkspass@127.0.0.1:5432/funworksdb #dockerpsql
+#DATABASE_URL=
+ENGINE=
+NAME=
+USER=
+PASSWORD=
+HOST=
+PORT=
+LDAP_USER=
+LDAP_PASS=
+LDAP_HOST=

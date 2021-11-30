@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<main class="form-signin container">
+    <div class="row py-4">
+        <div class="offset-3 col-md-6 cols-12">
+            <div class="card">
+                <div class="card-body">
+                    
+                    
+                    <form action='/logar' method="post">
+                        {% csrf_token %}
+                        <h1 class="h3 mb-3 fw-normal">Login</h1>
+                        
+                        <div class="form-floating mb-3">
+                            <input type="text" name="user" class="form-control" id="floatingInput" placeholder="first_name.last_name">
+                            <label for="floatingInput">Usuario</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" name="pass" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Senha</label>
+                        </div>
+            
+                        <button class="w-100 btn btn-lg fun-button" type="submit">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

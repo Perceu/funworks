@@ -1,5 +1,8 @@
-Django
+django
 python-decouple
+mssql-django
 dj-database-url
 gunicorn 
 psycopg2
+ipython
+python-ldap
